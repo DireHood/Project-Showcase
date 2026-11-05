@@ -2,37 +2,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f6f8;
-        color: #333;
-        margin: 30px;
-    }
+   
+body {
+    font-family: Arial, sans-serif;
+    background-color: #17131F;
+    color: #F5F0FA;
+    margin: 30px;
+}
 
-    h1 {
-        color: #1e3a5f;
-    }
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+}
 
-    h2 {
-        border-bottom: 2px solid #1e3a5f;
-        padding-bottom: 5px;
-    }
+h2 {
+    color: #BB86FC;
+    border-bottom: 2px solid #8E44AD;
+    padding-bottom: 8px;
+}
 
-    a {
-        color: #1e3a5f;
-        text-decoration: none;
-    }
+a {
+    color: #C5A5FF;
+    text-decoration: none;
+}
 
-    a:hover {
-        text-decoration: underline;
-    }
-    footer {
+a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+section {
+    background-color: #282033;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.project-card:hover {
+    background-color: #49365F;
+    transform: translateY(-3px);
+}
+
+.project-card h3 {
+    color: #FFFFFF;
+}
+
+.project-card p {
+    color: #D1C5E0;
+}
+
+.project-card a {
+    display: inline-block;
+    background-color: #8E44AD;
+    color: #FFFFFF;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+footer {
     margin-top: 40px;
     padding: 15px;
-    border: 2px solid #1e3a5f;
+    border: 2px solid #8E44AD;
     text-align: center;
     font-size: 14px;
+    color: #C5A5FF;
 }
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -44,17 +79,57 @@
 
     <p>Welcome to my Web Technologies portfolio!</p>
 
-    <h2>My Assignments</h2>
+    
+<section>
+    <h2>Module 1</h2>
 
-<ul>
-    <li>Jedds Tree Care</li>
-    <li>T3 Review Assignment</li>
-    <li>Save Your Fork</li>
-    <li>T5 Review Assignment</li>
-    <li>
-    <a href="gp_cover.html">Golden Pulps</a>
-    </li>
-</ul>
+    <div class="project-card">
+        <h3>Jedds Tree Care</h3>
+        <p>T1 Case Problem 1</p>
+        <a href="jedds-tree-care/jtc_index.html">Jedds Tree Care</a>
+    </div>
+</section>
+
+<section>
+    <h2>Module 2</h2>
+
+    <div class="project-card">
+        <h3>T3 Review Assignment</h3>
+        <a href="#">View Assignment</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Save Your Fork</h3>
+        <p>T4 Case Problem 1</p>
+        <a href="#">View Assignment</a>
+    </div>
+</section>
+
+<section>
+    <h2>Module 3</h2>
+
+    <div class="project-card">
+        <h3>T5 Review Assignment</h3>
+        <a href="#">View Assignment</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Golden Pulps</h3>
+        <p>T5 Case Problem 1</p>
+        <a href="golden-pulps/gp_cover.html">Golden Pulps</a>
+    </div>
+</section>
+
+<section>
+    <h2>Final Project</h2>
+
+    <div class="project-card">
+        <h3>Final E-Commerce Website</h3>
+        <p>My final Web Technologies project.</p>
+        <a href="#">View Final Project</a>
+    </div>
+</section>
+
 <footer>
     <p>This website is for a Web Technologies class, and no products or services are available for purchase</p>
 </footer>

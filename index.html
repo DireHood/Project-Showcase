@@ -1,137 +1,262 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<style>
-   
-body {
-    font-family: Arial, sans-serif;
-    background-color: #17131F;
-    color: #F5F0FA;
-    margin: 30px;
-}
-
-h1 {
-    color: #FFFFFF;
-    text-align: center;
-}
-
-h2 {
-    color: #BB86FC;
-    border-bottom: 2px solid #8E44AD;
-    padding-bottom: 8px;
-}
-
-a {
-    color: #C5A5FF;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-section {
-    background-color: #282033;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-.project-card:hover {
-    background-color: #49365F;
-    transform: translateY(-3px);
-}
-
-.project-card h3 {
-    color: #FFFFFF;
-}
-
-.project-card p {
-    color: #D1C5E0;
-}
-
-.project-card a {
-    display: inline-block;
-    background-color: #8E44AD;
-    color: #FFFFFF;
-    padding: 8px 15px;
-    border-radius: 5px;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 15px;
-    border: 2px solid #8E44AD;
-    text-align: center;
-    font-size: 14px;
-    color: #C5A5FF;
-}
-
-</style>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Project Showcase</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #17131F;
+            color: #F5F0FA;
+            margin: 15px 30px;
+            min-height: calc(100vh - 30px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            text-align: center;
+            margin: 10px 0;
+            font-size: 32px;
+        }
+
+        .title-accent {
+            width: 90px;
+            height: 4px;
+            background-color: #BB86FC;
+            border-radius: 5px;
+            margin: 0 auto 12px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #D1C5E0;
+            margin: 5px 0 18px;
+            line-height: 1.5;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 18px;
+            color: #C5A5FF;
+            font-size: 14px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            flex: 1;
+        }
+
+        section {
+            background-color: #282033;
+            padding: 18px;
+            border-radius: 10px;
+            border: 1px solid #49365F;
+        }
+
+        h2 {
+            color: #BB86FC;
+            border-bottom: 2px solid #8E44AD;
+            padding-bottom: 7px;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .module-label {
+            color: #A78BC9;
+            font-size: 11px;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .project-card {
+            background-color: #352A43;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+        }
+
+        .project-card:hover {
+            background-color: #49365F;
+            border-color: #BB86FC;
+            box-shadow: 0 0 12px rgba(187, 134, 252, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .project-card h3 {
+            color: #FFFFFF;
+            margin: 5px 0;
+        }
+
+        .project-card p {
+            color: #D1C5E0;
+            margin: 5px 0 12px;
+            font-size: 14px;
+        }
+
+        a {
+            color: #C5A5FF;
+            text-decoration: none;
+        }
+
+        .project-card a {
+            display: inline-block;
+            background-color: #8E44AD;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #BB86FC;
+            color: #17131F;
+        }
+
+        footer {
+            margin-top: 15px;
+            padding: 8px;
+            border: 2px solid #8E44AD;
+            text-align: center;
+            font-size: 12px;
+            color: #C5A5FF;
+            flex-shrink: 0;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                margin: 15px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+        }
+        .portfolio-details {
+    text-align: center;
+    color: #A78BC9;
+    font-size: 13px;
+    margin: 0 0 18px;
+}
+    </style>
 </head>
+
 <body>
 
     <h1>My Project Showcase</h1>
 
-    <p>Welcome to my Web Technologies portfolio!</p>
+    <div class="title-accent"></div>
 
-    
-<section>
-    <h2>Module 1</h2>
+    <p class="intro">
+        Welcome to my Web Technologies portfolio!
+    </p>
 
-    <div class="project-card">
-        <h3>Jedds Tree Care</h3>
-        <p>T1 Case Problem 1</p>
-        <a href="jedds-tree-care/jtc_index.html">Jedds Tree Care</a>
+    <p class="about">
+        This showcase highlights the projects and skills
+        I've developed throughout my Web Technologies course.
+    </p>
+
+    <p class="portfolio-details">
+    Created by Joshua Voisard | Last Updated: November 5, 2026
+    </p>
+
+    <div class="project-grid">
+
+        <!-- Module 1 -->
+        <section>
+            <div class="module-label">MODULE 01</div>
+            <h2>Module 1</h2>
+
+            <div class="project-card">
+                <h3>Jedds Tree Care</h3>
+                <p>T1 Case Problem 1</p>
+                <a href="jedds-tree-care/jtc_index.html" target="_blank">
+                    View Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 2 -->
+        <section>
+            <div class="module-label">MODULE 02</div>
+            <h2>Module 2</h2>
+
+            <div class="project-card">
+                <h3>T3 Review Assignment</h3>
+                <p>Module 2 – Review Assignment</p>
+                <a href="t3-review/pc_specials.html" target="_blank">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>T4 Case Problem 1: Save Your Fork</h3>
+                <p>Module 2 – Case Problem 1</p>
+                <a href="save-your-fork/sf_torte.html" target="_blank">
+                    View Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Module 3 -->
+        <section>
+            <div class="module-label">MODULE 03</div>
+            <h2>Module 3</h2>
+
+            <div class="project-card">
+                <h3>T5 Review Assignment</h3>
+                <p>Module 3 – Review Assignment</p>
+                <a href="#">Coming Soon</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Golden Pulps</h3>
+                <p>T5 Case Problem 1</p>
+                <a href="golden-pulps/gp_cover.html" target="_blank">
+                    View Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Final Project -->
+        <section>
+            <div class="module-label">FINAL PROJECT</div>
+            <h2>Final Project</h2>
+
+            <div class="project-card">
+                <h3>Final E-Commerce Website</h3>
+                <p>My final Web Technologies project.</p>
+                <a href="#">Coming Soon</a>
+            </div>
+        </section>
+
     </div>
-</section>
 
-<section>
-    <h2>Module 2</h2>
+    <footer>
+        <p>This website is for a Web Technologies class, and no products or services are available for purchase</p>
+    </footer>
 
-    <div class="project-card">
-        <h3>T3 Review Assignment</h3>
-        <a href="#">View Assignment</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Save Your Fork</h3>
-        <p>T4 Case Problem 1</p>
-        <a href="#">View Assignment</a>
-    </div>
-</section>
-
-<section>
-    <h2>Module 3</h2>
-
-    <div class="project-card">
-        <h3>T5 Review Assignment</h3>
-        <a href="#">View Assignment</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Golden Pulps</h3>
-        <p>T5 Case Problem 1</p>
-        <a href="golden-pulps/gp_cover.html">Golden Pulps</a>
-    </div>
-</section>
-
-<section>
-    <h2>Final Project</h2>
-
-    <div class="project-card">
-        <h3>Final E-Commerce Website</h3>
-        <p>My final Web Technologies project.</p>
-        <a href="#">View Final Project</a>
-    </div>
-</section>
-
-<footer>
-    <p>This website is for a Web Technologies class, and no products or services are available for purchase</p>
-</footer>
 </body>
 </html>
